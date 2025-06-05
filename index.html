@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização Tabela Hash Extensível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="appContainer">
+        <h1>Tabela Hash Extensível HASH</h1>
+
+        <div id="controls">
+            <input type="text" id="inputValue" placeholder="Digite um valor">
+            <button onclick="inserir()">Inserir</button>
+            <button onclick="buscar()">Buscar</button>
+        </div>
+
+        <div id="hashTableDisplay">
+            <div class="column" id="directoryColumn">
+                <h2>Diretório</h2>
+                <div id="diretorio"></div>
+            </div>
+
+            <div class="column" id="bucketsColumn">
+                <h2>Baldes (Buckets)</h2>
+                <div id="baldes"></div>
+            </div>
+        </div>
+
+        <div id="logContainer">
+            <h2>Log de Operações</h2>
+            <div id="log">
+                <div id="logContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

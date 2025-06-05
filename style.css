@@ -1,0 +1,186 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Um cinza azulado bem claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#appContainer {
+    width: 100%;
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    text-align: center;
+}
+
+h1 {
+    color: #00796b; /* Um tom de verde azulado (teal) */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #004d40; /* Teal mais escuro para subtítulos */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b2dfdb; /* Linha suave abaixo do subtítulo */
+    padding-bottom: 8px;
+    font-size: 1.8em;
+}
+
+/* Controles */
+#controls {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaço entre input e botões */
+}
+
+#controls input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #b0bec5; /* Cinza azulado claro */
+    border-radius: 6px;
+    font-size: 1em;
+    width: 250px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#controls input[type="text"]:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.2);
+    outline: none;
+}
+
+#controls button {
+    padding: 10px 20px;
+    background-color: #00796b; /* Teal */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#controls button:hover {
+    background-color: #004d40; /* Teal mais escuro */
+    transform: translateY(-2px);
+}
+
+/* Área de exibição da Tabela Hash */
+#hashTableDisplay {
+    display: flex;
+    flex-direction: row; /* Colunas lado a lado */
+    justify-content: space-between; /* Espaço entre as colunas */
+    gap: 20px; /* Espaço entre as colunas */
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.column {
+    flex: 1; /* Cada coluna ocupa metade do espaço */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#diretorio, #baldes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinha os itens à esquerda dentro das colunas */
+    gap: 10px; /* Espaço entre os itens */
+    min-height: 100px; /* Altura mínima para visualização */
+}
+
+.dir-entry, .balde {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    min-width: 120px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.dir-entry:hover, .balde:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dir-entry {
+    background-color: #e0f7fa; /* Cyan bem claro */
+    border-color: #b2ebf2; /* Borda cyan um pouco mais escura */
+}
+
+.dir-entry strong {
+    color: #007c91;
+    font-size: 1.1em;
+}
+
+.balde {
+    background-color: #fff9c4; /* Amarelo bem claro */
+    border-color: #fff59d; /* Borda amarela um pouco mais escura */
+}
+
+.balde strong {
+    color: #f57f17;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.balde span { /* Para profundidade local */
+    font-size: 0.9em;
+    color: #757575;
+}
+
+/* Log de Operações */
+#logContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#logContainer h2 {
+    margin-top: 0; /* Remove margem superior do h2 dentro do container */
+}
+
+#log {
+    background-color: #eef1f0; /* Fundo levemente diferente para o conteúdo do log */
+    border: 1px solid #d0d9d8;
+    border-radius: 6px;
+    padding: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#logContent {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; /* Fonte monoespaçada para o log */
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.5;
+}
+
+#logContent br {
+    content: "";
+    display: block;
+    margin-bottom: 5px; /* Espaço após cada mensagem do log */
+}
